@@ -50,7 +50,28 @@ export default function Home() {
       duration: 'Jan 2025 – Apr 2025',
       description:
         'Completed an intensive full-time program focused on full-stack web development using Agile methodologies. Learned React, Node.js, MySQL, Express, REST APIs, and CI/CD practices.',
-      skills: ['React.js', 'Node.js', 'MySQL', 'Express', 'REST API', 'Agile/Scrum'],
+      skills: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MySQL',
+        'REST API',
+        'JavaScript (ES6+)',
+        'Agile/Scrum',
+        'Git & GitHub',
+        'Full-Stack Development',
+        'Frontend Routing (React Router)',
+        'Component-Based Architecture',
+        'CRUD Operations',
+        'Asynchronous Programming (Promises, Async/Await)',
+        'Postman & API Testing',
+        'Responsive Web Design',
+        'HTML5 & CSS3',
+        'SASS/SCSS',
+        'JWT Authentication',
+        'Axios & Fetch API',
+        'Deployment (Netlify, Render)',
+      ],
     },
     {
       institution: 'Conestoga College',
@@ -58,7 +79,28 @@ export default function Home() {
       duration: 'Sept 2023 – Apr 2024',
       description:
         'Focused on software engineering principles, modern software practices, and system development life cycles with practical experience in Java and database design.',
-      skills: ['Java', 'SQL', 'OOP', 'System Design'],
+      skills: [
+        'C#',
+        'ASP.NET',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'SQL',
+        'OOP (Object-Oriented Programming)',
+        'System Design',
+        'Entity Framework',
+        'LINQ',
+        'MVC Architecture',
+        'RESTful APIs',
+        'Agile & Scrum Methodologies',
+        'Version Control (Git, GitHub)',
+        'Unit Testing (xUnit, NUnit)',
+        'Visual Studio',
+        'Azure DevOps',
+        'Responsive Web Design',
+        'Debugging & Troubleshooting',
+        'Database Design & Normalization',
+      ],
     },
     {
       institution: 'Fanshawe College',
@@ -66,7 +108,26 @@ export default function Home() {
       duration: 'Sept 2022 – Apr 2023',
       description:
         'Trained in enterprise IT operations, networking fundamentals, Linux systems, and IT service management best practices.',
-      skills: ['Linux', 'Networking', 'Cisco', 'ITSM'],
+      skills: [
+        'Linux',
+        'Networking',
+        'Cisco',
+        'ITSM',
+        'Windows Server Administration',
+        'Virtualization (VMware, Hyper-V)',
+        'Cloud Computing (Azure, AWS)',
+        'Network Security',
+        'Firewalls & VPNs',
+        'Active Directory',
+        'PowerShell Scripting',
+        'Incident Management',
+        'ITIL Foundations',
+        'Troubleshooting & Diagnostics',
+        'TCP/IP & Subnetting',
+        'Backup & Disaster Recovery',
+        'Technical Support',
+        'Service Desk Operations',
+      ],
     },
     {
       institution: 'Softwarica College',
@@ -74,7 +135,23 @@ export default function Home() {
       duration: 'Jan 2017 – Apr 2020',
       description:
         'Bachelor’s degree focused on full-stack development, software engineering, and database architecture. Gained strong academic foundations and project experience.',
-      skills: ['Java', 'C#', 'MySQL', 'Software Engineering'],
+      skills: [
+        'Java',
+        'Object-Oriented Programming (OOP)',
+        'Data Structures & Algorithms',
+        'Database Management Systems (MySQL, MongoDB)',
+        'Web Development (HTML, CSS, JavaScript)',
+        'Software Engineering Principles',
+        'Operating Systems',
+        'Networking Fundamentals',
+        'System Analysis & Design',
+        'Cloud Computing (AWS Basics, Azure Fundamentals)',
+        'Mobile App Development (Android)',
+        'Agile & Scrum Methodologies',
+        'Version Control (Git/GitHub)',
+        'UI/UX Fundamentals',
+        'Technical Documentation & Presentation',
+      ],
     },
   ];
 
@@ -84,10 +161,8 @@ export default function Home() {
       <ScrollAnimations />
       <Header />
       <main className="min-h-screen py-20 px-4 md:px-8 lg:px-12 max-w-5xl mx-auto">
-        {/* Hero */}
         <AnimatedHero />
 
-        {/* Projects */}
         <section id="projects" className="mb-24 scroll-mt-20">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-medium">Projects</h2>
@@ -106,7 +181,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills */}
         <section id="skills" className="mb-24 scroll-mt-20">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-medium">Skills</h2>
@@ -115,10 +189,8 @@ export default function Home() {
           <AnimatedSkills />
         </section>
 
-        {/* Experience */}
         <ExperienceSection />
 
-        {/* Education */}
         <section id="education" className="mb-24 scroll-mt-20">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-medium">Education</h2>
@@ -131,10 +203,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Socials */}
         <SocialsSection />
 
-        {/* Contact */}
         <ContactSection />
       </main>
       <Footer />
