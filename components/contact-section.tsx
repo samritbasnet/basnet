@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Download, Mail } from 'lucide-react';
+import { Download, Mail, Send } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -36,21 +36,16 @@ export default function ContactSection() {
             </Button>
           </a>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="bg-transparent border-white text-white hover:bg-white/10"
-          >
-            Telegram me
-          </Button>
+          <a href="https://t.me/samritbasnet" target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="lg" className="gap-2">
+              <Send className="h-4 w-4" />
+              Telegram me
+            </Button>
+          </a>
 
           <a href="mailto:samritbasnet70@gmail.com">
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-transparent border-white text-white hover:bg-white/10"
-            >
-              <Mail className="mr-2 h-4 w-4" />
+            <Button variant="secondary" size="lg" className="gap-2">
+              <Mail className="h-4 w-4" />
               Hit me an email
             </Button>
           </a>

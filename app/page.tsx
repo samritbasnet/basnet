@@ -18,16 +18,15 @@ export default function Home() {
       title: 'PixelPlay - Game Discovery Platform',
       description:
         'Capstone project: Built a full-stack game discovery e-commerce site with search, filtering, wishlist (Pixel Shelf), and an admin dashboard using JWT auth and CRUD functionality.',
-      image: '/projects/pixelplay.png',
+      image: 'assets/PixelPlayHomepage.png',
       tags: ['React', 'Node.js', 'MySQL', 'Supabase', 'JWT', 'REST API'],
-      url: 'https://github.com/samritbasnet/pixelplay',
+      url: 'https://github.com/samritbasnet/PixelPlay-Capstone',
       category: 'Capstone',
     },
     {
       title: 'InStock - Inventory Management System',
       description:
         'Team project: Developed a full-stack inventory platform with React, Node.js, Express, and MySQL. Implemented product listings, stock indicators, and warehouse views in an Agile Scrum environment.',
-      image: '/projects/instock.png',
       tags: ['React', 'Node.js', 'MySQL', 'Express', 'SCSS', 'Agile'],
       url: 'https://github.com/samritbasnet/instock',
       category: 'Team Project',
@@ -36,9 +35,9 @@ export default function Home() {
       title: 'Warner Bros. Discovery - Industry Project',
       description:
         'Industry collaboration: Worked with UX and Data Science teams to build a responsive React app for showcasing curated entertainment content. Focused on component styling and real-time data updates.',
-      image: '/projects/wbd.png',
+      image: 'assets/industry.png',
       tags: ['React', 'JavaScript', 'Figma', 'Responsive Design', 'UX'],
-      url: '#',
+      url: 'https://team404.vercel.app/',
       category: 'Industry Project',
     },
   ];
@@ -60,10 +59,10 @@ export default function Home() {
         'Agile/Scrum',
         'Git & GitHub',
         'Full-Stack Development',
-        'Frontend Routing (React Router)',
+
         'Component-Based Architecture',
         'CRUD Operations',
-        'Asynchronous Programming (Promises, Async/Await)',
+
         'Postman & API Testing',
         'Responsive Web Design',
         'HTML5 & CSS3',
@@ -91,10 +90,8 @@ export default function Home() {
         'Entity Framework',
         'LINQ',
         'MVC Architecture',
-        'RESTful APIs',
         'Agile & Scrum Methodologies',
         'Version Control (Git, GitHub)',
-        'Unit Testing (xUnit, NUnit)',
         'Visual Studio',
         'Azure DevOps',
         'Responsive Web Design',
@@ -119,7 +116,6 @@ export default function Home() {
         'Network Security',
         'Firewalls & VPNs',
         'Active Directory',
-        'PowerShell Scripting',
         'Incident Management',
         'ITIL Foundations',
         'Troubleshooting & Diagnostics',

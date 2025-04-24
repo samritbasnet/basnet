@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t py-12 mt-12">
@@ -12,7 +12,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-medium mb-4">Samrit Basnet</h3>
             <p className="text-muted-foreground mb-4">
-              Full-Stack Developer & Software Engineer specializing in building scalable web applications.
+              Full-Stack Developer & Software Engineer specializing in building scalable
+              web applications.
             </p>
             <div className="flex items-center gap-2">
               <Link
@@ -56,22 +57,34 @@ export default function Footer() {
             <h3 className="text-lg font-medium mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="#projects"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#experience" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="#experience"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Experience
                 </Link>
               </li>
               <li>
-                <Link href="#education" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="#education"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Education
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="#contact"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -80,10 +93,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-medium mb-4">Contact</h3>
             <address className="not-italic text-muted-foreground">
-              <p>Toronto, Canada</p>
+              <p>Waterloo, Canada</p>
               <p className="mt-2">
-                <a href="mailto:contact@samritbasnet.com" className="hover:text-primary transition-colors">
-                  contact@samritbasnet.com
+                <a
+                  href="mailto:contact@samritbasnet.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  samritbasnet70@gmail.com
                 </a>
               </p>
             </address>
@@ -94,5 +110,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
