@@ -1,47 +1,35 @@
-"use client"
+'use client';
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Badge } from "@/components/ui/badge"
-import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react"
+import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion';
+import { Briefcase, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ExperienceSection() {
   const experiences = [
     {
-      role: "Senior Software Engineer",
-      company: "Tech Solutions",
-      companyUrl: "#",
-      period: "November 2022 — Present",
-      skills: ["React.js", "Node.js", "MongoDB"],
+      role: 'Production Team Member',
+      company: 'Treehouse Foods',
+      companyUrl: '#',
+      period: 'Sept 2024 – Present',
+      description:
+        'Collaborated on a fast-paced production line, demonstrated strong time management, real-time problem solving, and communication with cross-functional teams under high-pressure environments.',
+      skills: ['Teamwork', 'Communication', 'Adaptability', 'Time Management'],
       icon: <Briefcase className="h-5 w-5 text-white" />,
-      iconBg: "bg-gray-700",
+      iconBg: 'bg-gray-700',
     },
     {
-      role: "Full-Stack Developer",
-      company: "Digital Innovations",
-      companyUrl: "#",
-      period: "October 2020 — July 2022",
-      description: "Built a microservice architecture (interaction map of microservices and services)",
-      skills: ["React.js", "Express", "PostgreSQL"],
+      role: 'Production Technician',
+      company: 'Sofina Foods',
+      companyUrl: '#',
+      period: 'June 2023 – Sept 2023',
+      description:
+        'Worked in a high-volume packaging environment in Mitchell, Canada. Operated production machinery, maintained packaging standards, and supported continuous workflow on the production line.',
+      skills: ['Packaging', 'Machine Operation', 'Efficiency', 'Workplace Safety'],
       icon: <Briefcase className="h-5 w-5 text-white" />,
-      iconBg: "bg-gray-700",
-      hasReadMore: true,
+      iconBg: 'bg-gray-700',
     },
-    {
-      role: "Computer Science",
-      company: "University of Technology",
-      companyUrl: "#",
-      period: "2016 — 2020",
-      icon: <GraduationCap className="h-5 w-5 text-white" />,
-      iconBg: "bg-blue-600",
-    },
-    {
-      role: "Born at Toronto, Canada",
-      period: "30th April 1995",
-      icon: <MapPin className="h-5 w-5 text-white" />,
-      iconBg: "bg-red-600",
-    },
-  ]
+  ];
 
   return (
     <section id="experience" className="mb-24 scroll-mt-20">
@@ -67,11 +55,14 @@ export default function ExperienceSection() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
                 <div>
                   <span className="font-medium">
-                    {experience.role}{" "}
+                    {experience.role}{' '}
                     {experience.company && (
                       <>
-                        at{" "}
-                        <Link href={experience.companyUrl} className="text-primary hover:underline">
+                        at{' '}
+                        <Link
+                          href={experience.companyUrl}
+                          className="text-primary hover:underline"
+                        >
                           {experience.company}
                         </Link>
                       </>
@@ -94,15 +85,19 @@ export default function ExperienceSection() {
                 </div>
               )}
 
-              {experience.description && <p className="text-muted-foreground mt-1">{experience.description}</p>}
+              {experience.description && (
+                <p className="text-muted-foreground mt-1">{experience.description}</p>
+              )}
 
               {experience.hasReadMore && (
-                <button className="text-sm text-muted-foreground hover:text-primary mt-2">Read more</button>
+                <button className="text-sm text-muted-foreground hover:text-primary mt-2">
+                  Read more
+                </button>
               )}
             </div>
           </motion.div>
         ))}
       </div>
     </section>
-  )
+  );
 }

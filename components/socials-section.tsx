@@ -1,48 +1,48 @@
-"use client"
+'use client';
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { motion } from 'framer-motion';
+import { Github, Instagram, Linkedin, Mail, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function SocialsSection() {
   const socials = [
     {
-      name: "Email",
+      name: 'Email',
       icon: <Mail className="h-5 w-5" />,
-      username: "hello@samritbasnet.com",
-      url: "mailto:hello@samritbasnet.com",
+      username: 'samritbasnet70@gmail.com',
+      url: 'mailto:samritbasnet70@gmail.com',
     },
     {
-      name: "Telegram",
-      icon: <Mail className="h-5 w-5" />, // Using Mail as placeholder, replace with Telegram icon
-      username: "@samritbasnet",
-      url: "https://t.me/samritbasnet",
+      name: 'Telegram',
+      icon: <Mail className="h-5 w-5" />, 
+      username: '@samritbasnet',
+      url: 'https://t.me/samritbasnet',
     },
     {
-      name: "Instagram",
+      name: 'Instagram',
       icon: <Instagram className="h-5 w-5" />,
-      username: "@samritbasnet",
-      url: "https://instagram.com/samritbasnet",
+      username: '@samritbasnet',
+      url: 'https://instagram.com/samritbasnet',
     },
     {
-      name: "GitHub",
+      name: 'GitHub',
       icon: <Github className="h-5 w-5" />,
-      username: "@samritbasnet",
-      url: "https://github.com/samritbasnet",
+      username: '@samritbasnet',
+      url: 'https://github.com/samritbasnet',
     },
     {
-      name: "Twitter",
+      name: 'Twitter',
       icon: <Twitter className="h-5 w-5" />,
-      username: "@samritbasnet",
-      url: "https://twitter.com/samritbasnet",
+      username: '@samritbasnet',
+      url: 'https://twitter.com/samritbasnet70',
     },
     {
-      name: "LinkedIn",
+      name: 'LinkedIn',
       icon: <Linkedin className="h-5 w-5" />,
-      username: "@samritbasnet",
-      url: "https://linkedin.com/in/samritbasnet",
+      username: '@samritbasnet',
+      url: 'https://www.linkedin.com/in/samrit-basnet/',
     },
-  ]
+  ];
 
   return (
     <section id="socials" className="mb-24">
@@ -77,5 +77,5 @@ export default function SocialsSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import { motion } from "framer-motion"
-import { Download, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { Download, Mail } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -19,24 +19,43 @@ export default function ContactSection() {
       >
         <h3 className="text-3xl font-bold mb-4">Contact me</h3>
         <p className="text-lg mb-8 max-w-2xl">
-          I'm always looking forward for new opportunities, and my inbox is always open. Whether you have a question or
-          just want to say hi, I'll try my best to get back to you!
+          I'm always looking forward for new opportunities, and my inbox is always open.
+          Whether you have a question or just want to say hi, I'll try my best to get back
+          to you!
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <Button variant="secondary" size="lg" className="gap-2">
-            <Download className="h-4 w-4" />
-            Download Résumé
-          </Button>
-          <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+          <a
+            href="https://docs.google.com/document/d/1uQ-cbdGoyGQpHR8V18DW2_drIvqPtVNQ7cWFyppgvRU/export?format=pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="lg" className="gap-2">
+              <Download className="h-4 w-4" />
+              Download Resume
+            </Button>
+          </a>
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="bg-transparent border-white text-white hover:bg-white/10"
+          >
             Telegram me
           </Button>
-          <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
-            <Mail className="mr-2 h-4 w-4" />
-            Hit me an email
-          </Button>
+
+          <a href="mailto:samritbasnet70@gmail.com">
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-transparent border-white text-white hover:bg-white/10"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Hit me an email
+            </Button>
+          </a>
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

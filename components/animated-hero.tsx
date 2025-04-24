@@ -105,7 +105,7 @@ export default function AnimatedHero() {
           </Button>
         </Link>
         <Link
-          href="https://twitter.com/samritbasnet"
+          href="https://twitter.com/samritbasnet70"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"

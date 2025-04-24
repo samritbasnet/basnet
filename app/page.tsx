@@ -1,64 +1,82 @@
-import Link from "next/link"
-import { ExternalLink } from "lucide-react"
-import ProjectCard from "@/components/project-card"
-import EducationCard from "@/components/education-card"
-import ContactSection from "@/components/contact-section"
-import ExperienceSection from "@/components/experience-section"
-import SocialsSection from "@/components/socials-section"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import AnimatedBackground from "@/components/animated-background"
-import AnimatedHero from "@/components/animated-hero"
-import ScrollAnimations from "@/components/scroll-animations"
-import AnimatedSkills from "@/components/animated-skills"
+import AnimatedBackground from '@/components/animated-background';
+import AnimatedHero from '@/components/animated-hero';
+import AnimatedSkills from '@/components/animated-skills';
+import ContactSection from '@/components/contact-section';
+import EducationCard from '@/components/education-card';
+import ExperienceSection from '@/components/experience-section';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import ProjectCard from '@/components/project-card';
+import ScrollAnimations from '@/components/scroll-animations';
+import SocialsSection from '@/components/socials-section';
+import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const projects = [
     {
-      title: "WeedingCard-Fortress",
-      description: "A modern web application for designing and customizing wedding invitation cards.",
-      image: "/placeholder.svg?height=80&width=80",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      url: "https://github.com/samritbasnet/WeedingCard-Fortress",
-      category: "Web3",
+      title: 'PixelPlay - Game Discovery Platform',
+      description:
+        'Capstone project: Built a full-stack game discovery e-commerce site with search, filtering, wishlist (Pixel Shelf), and an admin dashboard using JWT auth and CRUD functionality.',
+      image: '/projects/pixelplay.png',
+      tags: ['React', 'Node.js', 'MySQL', 'Supabase', 'JWT', 'REST API'],
+      url: 'https://github.com/samritbasnet/pixelplay',
+      category: 'Capstone',
     },
     {
-      title: "Async Avengers Hackathon",
+      title: 'InStock - Inventory Management System',
       description:
-        "A two-player game inspired by 'Who Wants to Be a Millionaire' where players answer multiple-choice questions.",
-      image: "/placeholder.svg?height=80&width=80",
-      tags: ["JavaScript", "HTML", "CSS", "Game"],
-      url: "https://github.com/samritbasnet/async-avengers-hackathon",
-      category: "Game Development",
+        'Team project: Developed a full-stack inventory platform with React, Node.js, Express, and MySQL. Implemented product listings, stock indicators, and warehouse views in an Agile Scrum environment.',
+      image: '/projects/instock.png',
+      tags: ['React', 'Node.js', 'MySQL', 'Express', 'SCSS', 'Agile'],
+      url: 'https://github.com/samritbasnet/instock',
+      category: 'Team Project',
     },
     {
-      title: "E-Commerce Platform",
+      title: 'Warner Bros. Discovery - Industry Project',
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=80&width=80",
-      tags: ["React", "Redux", "Node.js", "MongoDB"],
-      url: "#",
-      category: "Web Development",
+        'Industry collaboration: Worked with UX and Data Science teams to build a responsive React app for showcasing curated entertainment content. Focused on component styling and real-time data updates.',
+      image: '/projects/wbd.png',
+      tags: ['React', 'JavaScript', 'Figma', 'Responsive Design', 'UX'],
+      url: '#',
+      category: 'Industry Project',
     },
-  ]
+  ];
 
   const education = [
     {
-      institution: "University of Technology",
-      degree: "Master of Computer Science",
-      duration: "2020 - 2022",
+      institution: 'BrainStation',
+      degree: 'Diploma, Software Engineering',
+      duration: 'Jan 2025 – Apr 2025',
       description:
-        "Specialized in Artificial Intelligence and Machine Learning with a focus on neural networks and deep learning algorithms.",
-      skills: ["Machine Learning", "Neural Networks", "Data Science", "Python"],
+        'Completed an intensive full-time program focused on full-stack web development using Agile methodologies. Learned React, Node.js, MySQL, Express, REST APIs, and CI/CD practices.',
+      skills: ['React.js', 'Node.js', 'MySQL', 'Express', 'REST API', 'Agile/Scrum'],
     },
     {
-      institution: "City College",
-      degree: "Bachelor of Science in Computer Engineering",
-      duration: "2016 - 2020",
-      description: "Focused on software development, algorithms, and data structures with minor in mathematics.",
-      skills: ["Algorithms", "Data Structures", "Software Engineering", "Java"],
+      institution: 'Conestoga College',
+      degree: 'Post Graduate Certificate in Computer Application Development',
+      duration: 'Sept 2023 – Apr 2024',
+      description:
+        'Focused on software engineering principles, modern software practices, and system development life cycles with practical experience in Java and database design.',
+      skills: ['Java', 'SQL', 'OOP', 'System Design'],
     },
-  ]
+    {
+      institution: 'Fanshawe College',
+      degree: 'Post Graduate Certificate in IT Infrastructure',
+      duration: 'Sept 2022 – Apr 2023',
+      description:
+        'Trained in enterprise IT operations, networking fundamentals, Linux systems, and IT service management best practices.',
+      skills: ['Linux', 'Networking', 'Cisco', 'ITSM'],
+    },
+    {
+      institution: 'Softwarica College',
+      degree: 'BSc (Hons) Computing, partnered with Coventry University',
+      duration: 'Jan 2017 – Apr 2020',
+      description:
+        'Bachelor’s degree focused on full-stack development, software engineering, and database architecture. Gained strong academic foundations and project experience.',
+      skills: ['Java', 'C#', 'MySQL', 'Software Engineering'],
+    },
+  ];
 
   return (
     <>
@@ -73,7 +91,10 @@ export default function Home() {
         <section id="projects" className="mb-24 scroll-mt-20">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-medium">Projects</h2>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+            <Link
+              href="#"
+              className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1"
+            >
               View all <ExternalLink className="h-3 w-3" />
             </Link>
           </div>
@@ -118,5 +139,5 @@ export default function Home() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
