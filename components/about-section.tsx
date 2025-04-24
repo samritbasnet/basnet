@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { CheckCircle } from "lucide-react"
+import { motion, useInView } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
+import { useRef } from 'react';
 
 export default function AboutSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const highlights = [
-    "Building scalable web applications",
-    "Frontend and backend technologies",
-    "Clean, efficient code",
-    "Fast-paced, collaborative environments",
-    "Continuous learning and improvement",
-    "Impactful solutions",
-  ]
+    'Full-Stack Web Development (React, Node, MySQL)',
+    'Collaborative Agile Environments (JIRA, Scrum)',
+    'Scalable UI/UX with SCSS and Material UI',
+    'JWT Authentication & API Integration',
+    'Pixel-perfect Figma to Code Implementation',
+    'Strong Communication & Problem-Solving',
+  ];
 
   return (
     <section id="about" className="py-20 bg-muted/50" ref={ref}>
@@ -26,8 +26,12 @@ export default function AboutSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">About Me</span>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">My Journey</h2>
+          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+            About Me
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            My Journey
+          </h2>
           <div className="h-1 w-20 bg-primary mt-6 rounded-full"></div>
         </motion.div>
 
@@ -39,12 +43,15 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-lg">
-              I'm a passionate Full-Stack Developer specializing in building scalable web applications and solving
-              complex real-world problems through clean, efficient code.
+              I'm Samrit, a passionate Full-Stack Developer with a background in IT
+              infrastructure and computing. My curiosity about how games and technology
+              work led me to master tools like React, Node.js, MySQL, and more.
             </p>
             <p className="text-lg">
-              With expertise across both frontend and backend technologies, I thrive in fast-paced, collaborative
-              environments where continuous learning and impactful solutions are at the forefront.
+              I’ve delivered real-world solutions—from a feature-rich e-commerce platform
+              to inventory systems and a Warner Bros. Discovery content experience. I
+              thrive in fast-paced, agile environments and love bringing ideas to life
+              through clean, maintainable code.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
               {highlights.map((item, index) => (
@@ -69,24 +76,55 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="relative z-10 bg-card rounded-lg p-6 shadow-lg border">
-              <h3 className="text-xl font-bold mb-4">Professional Experience</h3>
+              <h3 className="text-xl font-bold mb-4">Professional Highlights</h3>
               <div className="space-y-6">
-                {[1, 2, 3].map((_, index) => (
-                  <motion.div
-                    key={index}
-                    className="relative pl-6 border-l-2 border-primary/30"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-                  >
-                    <div className="absolute left-[-8px] top-0 h-4 w-4 rounded-full bg-primary"></div>
-                    <h4 className="font-bold">Senior Developer</h4>
-                    <p className="text-sm text-muted-foreground">Company Name • 2020 - Present</p>
-                    <p className="mt-2">
-                      Led development of scalable web applications using React, Node.js, and MongoDB.
-                    </p>
-                  </motion.div>
-                ))}
+                <motion.div
+                  className="relative pl-6 border-l-2 border-primary/30"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                >
+                  <div className="absolute left-[-8px] top-0 h-4 w-4 rounded-full bg-primary"></div>
+                  <h4 className="font-bold">PixelPlay Capstone</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Full-Stack Game Discovery Platform
+                  </p>
+                  <p className="mt-2">
+                    Engineered a scalable e-commerce site with React, Node, MySQL &
+                    Supabase. Built admin dashboard with secure JWT auth and game
+                    inventory CRUD.
+                  </p>
+                </motion.div>
+                <motion.div
+                  className="relative pl-6 border-l-2 border-primary/30"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: 0.6 }}
+                >
+                  <div className="absolute left-[-8px] top-0 h-4 w-4 rounded-full bg-primary"></div>
+                  <h4 className="font-bold">Warner Bros. Discovery Project</h4>
+                  <p className="text-sm text-muted-foreground">Industry Collaboration</p>
+                  <p className="mt-2">
+                    Collaborated with designers and data scientists to develop a
+                    personalized content interface using React and real-time dynamic
+                    updates.
+                  </p>
+                </motion.div>
+                <motion.div
+                  className="relative pl-6 border-l-2 border-primary/30"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: 0.7 }}
+                >
+                  <div className="absolute left-[-8px] top-0 h-4 w-4 rounded-full bg-primary"></div>
+                  <h4 className="font-bold">InStock Inventory App</h4>
+                  <p className="text-sm text-muted-foreground">Agile Team Project</p>
+                  <p className="mt-2">
+                    Delivered core inventory features and clean SCSS UI, working in a
+                    professional Agile environment with GitHub PRs, Jira, and code
+                    reviews.
+                  </p>
+                </motion.div>
               </div>
             </div>
             <div className="absolute inset-0 bg-primary/5 rounded-lg transform rotate-3 -z-10"></div>
@@ -94,5 +132,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
