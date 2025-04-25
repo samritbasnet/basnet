@@ -27,6 +27,7 @@ export default function Home() {
       title: 'InStock - Inventory Management System',
       description:
         'Team project: Developed a full-stack inventory platform with React, Node.js, Express, and MySQL. Implemented product listings, stock indicators, and warehouse views in an Agile Scrum environment.',
+      image: 'assets/Instock.png',
       tags: ['React', 'Node.js', 'MySQL', 'Express', 'SCSS', 'Agile'],
       url: 'https://github.com/samritbasnet/instock',
       category: 'Team Project',
