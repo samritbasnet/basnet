@@ -78,7 +78,7 @@ export default function AnimatedHero() {
   return (
     <section className="mb-24 pt-8" ref={containerRef}>
       <h2 ref={headingRef} className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-        Full-stack developer building fast, modern web apps.
+        Engineering smooth, powerful web experiences.
       </h2>
       <p ref={paragraphRef} className="text-lg text-muted-foreground mb-8 max-w-2xl">
         Hey, I’m <span className="font-medium text-foreground">Samrit Basnet</span> — a
