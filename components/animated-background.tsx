@@ -38,7 +38,7 @@ export default function AnimatedBackground() {
     }
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 
-    const particleColor = theme === 'dark' ? 0xffffff : 0x333333;
+    const particleColor = theme === 'dark' ? 0xffffff : 0x0000;
 
  
     const particlesMaterial = new THREE.PointsMaterial({
