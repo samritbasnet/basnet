@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { Badge } from '@/components/ui/badge';
-import { CardContent } from '@/components/ui/card';
-import { motion } from 'framer-motion';
-import gsap from 'gsap';
-import { ExternalLink, Github, Star } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { Badge } from "@/components/ui/badge";
+import { CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ExternalLink, Github, Star } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 interface ProjectProps {
   project: {
@@ -30,9 +30,9 @@ export default function ProjectCard({ project }: ProjectProps) {
   useEffect(() => {
     if (isHovered && cardRef.current) {
       gsap.fromTo(
-        cardRef.current.querySelectorAll('.tag'),
+        cardRef.current.querySelectorAll(".tag"),
         { y: 10, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.05, duration: 0.4, ease: 'power2.out' }
+        { y: 0, opacity: 1, stagger: 0.05, duration: 0.4, ease: "power2.out" }
       );
     }
   }, [isHovered]);
@@ -41,20 +41,20 @@ export default function ProjectCard({ project }: ProjectProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       ref={cardRef}
     >
       <Link href={project.url} target="_blank" rel="noopener noreferrer">
         <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-          className="group rounded-2xl overflow-hidden border border-border bg-card hover-lift hover:border-primary/30 transition-all duration-300 bg-gradient-to-br from-card to-card/50"
+          whileHover={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="group card-enhanced hover-lift overflow-hidden"
         >
           <div className="relative w-full h-56 md:h-64">
             <Image
-              src={project.image || '/placeholder.svg'}
+              src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
               className="object-cover object-center w-full h-full"
@@ -84,13 +84,17 @@ export default function ProjectCard({ project }: ProjectProps) {
               </Badge>
             </div>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed text-readable">
               {project.description}
             </p>
 
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="tag font-normal text-xs">
+                <Badge
+                  key={tag}
+                  variant="secondary"
+                  className="tag font-normal text-xs"
+                >
                   {tag}
                 </Badge>
               ))}
@@ -98,9 +102,9 @@ export default function ProjectCard({ project }: ProjectProps) {
 
             {project.github && (
               <div className="pt-2 border-t border-border">
-                <Link 
-                  href={project.github} 
-                  target="_blank" 
+                <Link
+                  href={project.github}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
                   onClick={(e) => e.stopPropagation()}

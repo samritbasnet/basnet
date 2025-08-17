@@ -199,63 +199,65 @@ export default function Home() {
       <AnimatedBackground />
       <ScrollAnimations />
       <Header />
-      <main className="min-h-screen py-20 px-4 md:px-8 lg:px-12 max-w-5xl mx-auto">
+      <main className="min-h-screen">
         <AnimatedHero />
 
-        <section id="projects" className="mb-32 scroll-mt-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Featured <span className="text-gradient">Projects</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A showcase of my work spanning full-stack development, from
-              finance dashboards to e-commerce platforms
-            </p>
-          </div>
+        <section id="projects" className="section-clean scroll-mt-20">
+          <div className="professional-container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Featured <span className="text-gradient">Projects</span>
+              </h2>
+              <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
+                A showcase of my work spanning full-stack development, from
+                finance dashboards to e-commerce platforms
+              </p>
+            </div>
 
-          <div className="grid gap-8">
-            {projects
-              .filter((p) => p.featured)
-              .map((project) => (
-                <ProjectCard key={project.title} project={project} />
-              ))}
-          </div>
-
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-8 text-center">
-              Other Projects
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-10">
               {projects
-                .filter((p) => !p.featured)
+                .filter((p) => p.featured)
                 .map((project) => (
                   <ProjectCard key={project.title} project={project} />
                 ))}
             </div>
+
+            <div className="mt-20">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
+                Other Projects
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                {projects
+                  .filter((p) => !p.featured)
+                  .map((project) => (
+                    <ProjectCard key={project.title} project={project} />
+                  ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        <section id="skills" className="mb-32 scroll-mt-20">
-          <AnimatedSkills />
-        </section>
+        <AnimatedSkills />
 
         <ExperienceSection />
 
-        <section id="education" className="mb-32 scroll-mt-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-gradient">Education</span> & Certification
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A continuous learning journey spanning full-stack development,
-              software engineering, and IT infrastructure
-            </p>
-          </div>
+        <section id="education" className="section-clean scroll-mt-20">
+          <div className="professional-container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="text-gradient">Education</span> & Certification
+              </h2>
+              <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
+                A continuous learning journey spanning full-stack development,
+                software engineering, and IT infrastructure
+              </p>
+            </div>
 
-          <div className="space-y-8">
-            {education.map((edu) => (
-              <EducationCard key={edu.institution} education={edu} />
-            ))}
+            <div className="space-y-8">
+              {education.map((edu) => (
+                <EducationCard key={edu.institution} education={edu} />
+              ))}
+            </div>
           </div>
         </section>
 
