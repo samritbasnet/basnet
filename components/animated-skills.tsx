@@ -4,10 +4,30 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const skills = {
-  Frontend: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Material UI'],
-  Backend: ['Node.js', 'Express.js', 'MySQL', 'Supabase', 'JWT Auth'],
-  Tools: ['Git', 'GitHub', 'Postman', 'VS Code', 'CI/CD', 'JIRA', 'Agile'],
-  Design: ['Figma', 'Wireframing', 'Prototyping', 'User Testing'],
+  Frontend: {
+    items: ['React.js', 'Next.js', 'JavaScript ES6+', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'SCSS', 'Chart.js', 'Framer Motion'],
+    icon: '🎨'
+  },
+  Backend: {
+    items: ['Node.js', 'Express.js', 'MySQL', 'MongoDB', 'Supabase', 'JWT Auth', 'REST APIs', 'Database Design'],
+    icon: '⚙️'
+  },
+  Tools: {
+    items: ['Git', 'GitHub', 'VS Code', 'Postman', 'Docker', 'CI/CD', 'JIRA', 'Agile/Scrum', 'Azure DevOps', 'npm/pnpm'],
+    icon: '🛠️'
+  },
+  Design: {
+    items: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping', 'Responsive Design', 'User Testing'],
+    icon: '🎯'
+  },
+  'Cloud & DevOps': {
+    items: ['Vercel', 'Netlify', 'Azure', 'AWS Basics', 'Linux', 'Deployment', 'Performance Optimization'],
+    icon: '☁️'
+  },
+  'Soft Skills': {
+    items: ['Problem Solving', 'Team Collaboration', 'Code Review', 'Technical Communication', 'Project Management', 'Mentoring'],
+    icon: '🤝'
+  }
 };
 
 export default function AnimatedSkills() {
@@ -15,44 +35,52 @@ export default function AnimatedSkills() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="skills" ref={ref} className="py-20 bg-muted/50">
-      <div className="container max-w-5xl mx-auto">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl font-bold mb-2">Skills & Tools</h2>
-          <p className="text-muted-foreground text-lg">
-            A refined toolkit built through real-world projects and collaborations
-          </p>
-        </motion.div>
+    <div ref={ref} className="mb-24">
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-3xl font-bold mb-4">
+          <span className="text-gradient">Technical Expertise</span>
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          A comprehensive skill set developed through hands-on projects, formal education, and industry collaboration
+        </p>
+      </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {Object.entries(skills).map(([category, items], i) => (
-            <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="bg-card rounded-xl p-6 shadow-md border"
-            >
-              <h3 className="text-xl font-semibold mb-4 text-primary">{category}</h3>
-              <ul className="flex flex-wrap gap-3">
-                {items.map((skill) => (
-                  <li
-                    key={skill}
-                    className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Object.entries(skills).map(([category, { items, icon }], i) => (
+          <motion.div
+            key={category}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 * i }}
+            className="group bg-card rounded-xl p-6 border hover-lift hover:border-primary/30 transition-all duration-300"
+          >
+            <div className="flex items-center mb-4">
+              <span className="text-2xl mr-3">{icon}</span>
+              <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                {category}
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {items.map((skill, index) => (
+                <motion.span
+                  key={skill}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 0.1 * i + 0.05 * index }}
+                  className="px-3 py-1.5 text-xs font-medium bg-secondary/50 hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200 cursor-default"
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

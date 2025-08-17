@@ -89,23 +89,55 @@ export default function AnimatedHero() {
   }, []);
 
   return (
-    <section className="mb-24 pt-8" ref={containerRef}>
-      <h2 ref={headingRef} className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-       Developer{' '}
-      </h2>
-      <p ref={paragraphRef} className="text-lg text-muted-foreground mb-8 max-w-2xl">
-        Hi there! My name is{' '}
-        <span className="font-medium text-foreground">Samrit Basnet</span>, and I am a{' '}
-        <Link href="#" className="underline underline-offset-4 hover:text-primary">
-          full-stack developer
-        </Link>{' '}
-        &{' '}
-        <Link href="#" className="underline underline-offset-4 hover:text-primary">
-          software engineer
-        </Link>
-        , specializing in building scalable web applications and solving complex
-        real-world problems.
-      </p>
+    <section className="mb-32 pt-16 relative" ref={containerRef}>
+      <div className="absolute inset-0 grid-pattern opacity-30"></div>
+      <div className="relative z-10">
+        <div className="mb-6">
+          <span className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
+            🚀 Available for hire
+          </span>
+        </div>
+        
+        <h1 ref={headingRef} className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+          Full-Stack{' '}
+          <span className="text-gradient">Developer</span>
+        </h1>
+        
+        <p ref={paragraphRef} className="text-xl text-muted-foreground mb-12 max-w-3xl leading-relaxed">
+          Hi, I'm{' '}
+          <span className="font-semibold text-foreground">Samrit Basnet</span> — a passionate{' '}
+          <span className="text-primary font-medium">full-stack developer</span>{' '}
+          and{' '}
+          <span className="text-primary font-medium">software engineer</span>{' '}
+          who crafts modern, scalable web applications. I transform complex problems into elegant solutions, 
+          with a focus on user experience and clean code. Recently shipped{' '}
+          <Link 
+            href="https://moneyflow-liard.vercel.app/" 
+            className="font-semibold text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary/60 transition-all"
+          >
+            MoneyFlow
+          </Link>
+          , a feature-rich finance dashboard with real-time data visualization.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <Link
+            href="#projects"
+            className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors group"
+          >
+            View My Work
+            <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+          <Link
+            href="#contact"
+            className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-colors"
+          >
+            Get In Touch
+          </Link>
+        </div>
+      </div>
 
       <div className="flex items-center gap-4 mt-8">
         <Link
