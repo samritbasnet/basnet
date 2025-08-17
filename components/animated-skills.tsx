@@ -100,7 +100,8 @@ export default function AnimatedSkills() {
             <span className="text-gradient">Technical Expertise</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
-            Technical skills developed through hands-on projects and formal training
+            Technical skills developed through hands-on projects and formal
+            training
           </p>
         </motion.div>
 

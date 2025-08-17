@@ -113,7 +113,8 @@ export default function AnimatedHero() {
         >
           A passionate{" "}
           <span className="text-primary font-medium">software engineer</span>{" "}
-          building modern web applications with clean, scalable code. Recently shipped{" "}
+          building modern web applications with clean, scalable code. Recently
+          shipped{" "}
           <Link
             href="https://moneyflow-liard.vercel.app/"
             className="font-semibold text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary/60 transition-all"
