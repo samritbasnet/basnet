@@ -66,7 +66,7 @@ export default function AnimatedHero() {
           <Link
             href="mailto:contact@samritbasnet.com"
             aria-label="Email"
-            className="p-2 text-muted-foreground hover:text-primary"
+            className="social-icon p-2 text-muted-foreground hover:text-primary"
           >
             <Mail className="h-5 w-5" />
           </Link>
@@ -75,7 +75,7 @@ export default function AnimatedHero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="p-2 text-muted-foreground hover:text-primary"
+            className="social-icon p-2 text-muted-foreground hover:text-primary"
           >
             <Linkedin className="h-5 w-5" />
           </Link>
@@ -84,7 +84,7 @@ export default function AnimatedHero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="p-2 text-muted-foreground hover:text-primary"
+            className="social-icon p-2 text-muted-foreground hover:text-primary"
           >
             <Github className="h-5 w-5" />
           </Link>
@@ -93,7 +93,7 @@ export default function AnimatedHero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            className="p-2 text-muted-foreground hover:text-primary"
+            className="social-icon p-2 text-muted-foreground hover:text-primary"
           >
             <Twitter className="h-5 w-5" />
           </Link>
