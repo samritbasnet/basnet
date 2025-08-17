@@ -1,8 +1,5 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
 const skills = {
   Frontend: {
     items: [
@@ -84,18 +81,10 @@ const skills = {
 };
 
 export default function AnimatedSkills() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <div ref={ref} className="section-clean">
+    <div className="section-clean">
       <div className="professional-container">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-gradient">Technical Expertise</span>
           </h2>
@@ -103,40 +92,31 @@ export default function AnimatedSkills() {
             Technical skills developed through hands-on projects and formal
             training
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skills).map(([category, { items, icon }], i) => (
-            <motion.div
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Object.entries(skills).map(([category, { items, icon }]) => (
+            <div
               key={category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="group card-enhanced hover-lift p-8"
+              className="card-enhanced"
             >
-              <div className="flex items-center mb-6">
-                <span className="text-3xl mr-4">{icon}</span>
-                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">{icon}</span>
+                <h3 className="text-lg font-semibold text-foreground">
                   {category}
                 </h3>
               </div>
-              <div className="flex flex-wrap gap-3">
-                {items.map((skill, index) => (
-                  <motion.span
+              <div className="flex flex-wrap gap-2">
+                {items.map((skill) => (
+                  <span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{
-                      duration: 0.3,
-                      delay: 0.1 * i + 0.05 * index,
-                    }}
-                    className="skill-tag px-4 py-2 text-sm font-medium rounded-lg cursor-default text-readable"
+                    className="skill-tag px-3 py-1 text-sm font-medium rounded-md"
                   >
                     {skill}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
