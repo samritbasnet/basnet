@@ -100,8 +100,7 @@ export default function AnimatedSkills() {
             <span className="text-gradient">Technical Expertise</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
-            A comprehensive skill set developed through hands-on projects, formal
-            education, and industry collaboration
+            Technical skills developed through hands-on projects and formal training
           </p>
         </motion.div>
 
@@ -126,7 +125,10 @@ export default function AnimatedSkills() {
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.3, delay: 0.1 * i + 0.05 * index }}
+                    transition={{
+                      duration: 0.3,
+                      delay: 0.1 * i + 0.05 * index,
+                    }}
                     className="px-4 py-2 text-sm font-medium bg-secondary/60 hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200 cursor-default text-readable"
                   >
                     {skill}

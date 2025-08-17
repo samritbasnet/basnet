@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
@@ -108,28 +107,21 @@ export default function AnimatedHero() {
           <span className="text-gradient">Full-Stack Developer</span>
         </h1>
 
-        <div
+        <p
           ref={paragraphRef}
-          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-4xl leading-relaxed space-y-4"
+          className="text-lg md:text-xl text-muted-foreground mb-12 max-w-4xl leading-relaxed text-readable"
         >
-          <p className="text-readable">
-            A passionate{" "}
-            <span className="text-primary font-medium">software engineer</span>{" "}
-            specializing in modern web technologies. I build scalable applications
-            that solve real-world problems with clean, maintainable code.
-          </p>
-          <p className="text-readable">
-            Recently shipped{" "}
-            <Link
-              href="https://moneyflow-liard.vercel.app/"
-              className="font-semibold text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary/60 transition-all"
-            >
-              MoneyFlow
-            </Link>
-            , a comprehensive finance dashboard featuring interactive charts,
-            real-time data visualization, and responsive design.
-          </p>
-        </div>
+          A passionate{" "}
+          <span className="text-primary font-medium">software engineer</span>{" "}
+          building modern web applications with clean, scalable code. Recently shipped{" "}
+          <Link
+            href="https://moneyflow-liard.vercel.app/"
+            className="font-semibold text-primary hover:text-primary/80 underline underline-offset-4 decoration-primary/30 hover:decoration-primary/60 transition-all"
+          >
+            MoneyFlow
+          </Link>
+          , a finance dashboard with interactive data visualization.
+        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <Link

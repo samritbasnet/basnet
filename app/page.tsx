@@ -3,7 +3,6 @@ import AnimatedHero from "@/components/animated-hero";
 import AnimatedSkills from "@/components/animated-skills";
 import ContactSection from "@/components/contact-section";
 import EducationCard from "@/components/education-card";
-import ExperienceSection from "@/components/experience-section";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import ProjectCard from "@/components/project-card";
@@ -15,14 +14,13 @@ export default function Home() {
     {
       title: "MoneyFlow - Personal Finance Dashboard",
       description:
-        "A modern, responsive financial tracking application built with vanilla JavaScript. Features 4 interactive charts with real-time updates, dark/light theme system, and professional UI/UX design. Demonstrates mastery of ES6+, Chart.js integration, and responsive design.",
+        "A comprehensive finance dashboard featuring interactive charts, real-time data visualization, and responsive design. Built with vanilla JavaScript and Chart.js.",
       image: "assets/moneyflow.png",
       tags: [
         "Vanilla JavaScript",
         "Chart.js",
         "CSS Grid",
         "Theme System",
-        "Responsive Design",
         "Data Visualization",
       ],
       url: "https://moneyflow-liard.vercel.app/",
@@ -33,55 +31,32 @@ export default function Home() {
     {
       title: "PixelPlay - Game Discovery Platform",
       description:
-        "Capstone project: Built a full-stack game discovery e-commerce site with search, filtering, wishlist (Pixel Shelf), and an admin dashboard using JWT auth and CRUD functionality.",
+        "Full-stack game discovery e-commerce platform with search, filtering, wishlist features, and admin dashboard using modern web technologies.",
       image: "assets/PixelPlayHomepage.png",
       tags: ["React", "Node.js", "MySQL", "Supabase", "JWT", "REST API"],
       url: "https://github.com/samritbasnet/PixelPlay-Capstone",
-      category: "Capstone",
+      category: "Capstone Project",
       featured: true,
-    },
-    {
-      title: "TaskManager Pro - Productivity Dashboard",
-      description:
-        "Full-featured task management application with drag-and-drop functionality, priority levels, deadlines, and progress tracking. Built with vanilla JavaScript to demonstrate advanced DOM manipulation and state management.",
-      image: "assets/taskmanager.png",
-      tags: [
-        "JavaScript ES6+",
-        "Drag & Drop API",
-        "Local Storage",
-        "CSS Animations",
-        "Responsive Design",
-      ],
-      url: "#", // Will be updated when you build this
-      github: "#",
-      category: "Personal Project",
     },
     {
       title: "InStock - Inventory Management System",
       description:
-        "Team project: Developed a full-stack inventory platform with React, Node.js, Express, and MySQL. Implemented product listings, stock indicators, and warehouse views in an Agile Scrum environment.",
+        "Collaborative full-stack inventory platform with product management, stock tracking, and warehouse views built in Agile environment.",
       image: "assets/Instock.png",
-      tags: [
-        "React",
-        "Node.js",
-        "MySQL",
-        "Express",
-        "SCSS",
-        "Agile",
-        "Jira",
-        "PR Review",
-      ],
+      tags: ["React", "Node.js", "MySQL", "Express", "SCSS", "Agile"],
       url: "https://github.com/samritbasnet/instock",
       category: "Team Project",
+      featured: false,
     },
     {
-      title: "Warner Bros. Discovery - Industry Project",
+      title: "BrainStation Industry Project",
       description:
-        "Industry collaboration: Worked with UX and Data Science teams to build a responsive React app for showcasing curated entertainment content. Focused on component styling and real-time data updates.",
+        "Industry collaboration building responsive React applications with focus on modern UI/UX design and component architecture.",
       image: "assets/industry.png",
-      tags: ["React", "JavaScript", "Figma", "Responsive Design", "UX"],
+      tags: ["React", "JavaScript", "Responsive Design", "Team Collaboration"],
       url: "https://team404.vercel.app/",
       category: "Industry Project",
+      featured: false,
     },
   ];
 
@@ -209,8 +184,7 @@ export default function Home() {
                 Featured <span className="text-gradient">Projects</span>
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
-                A showcase of my work spanning full-stack development, from
-                finance dashboards to e-commerce platforms
+                Recent work showcasing full-stack development skills
               </p>
             </div>
 
@@ -239,17 +213,14 @@ export default function Home() {
 
         <AnimatedSkills />
 
-        <ExperienceSection />
-
         <section id="education" className="section-clean scroll-mt-20">
           <div className="professional-container">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="text-gradient">Education</span> & Certification
+                <span className="text-gradient">Education</span>
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-readable">
-                A continuous learning journey spanning full-stack development,
-                software engineering, and IT infrastructure
+                Formal training in software engineering and web development
               </p>
             </div>
 
