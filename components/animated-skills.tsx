@@ -96,10 +96,7 @@ export default function AnimatedSkills() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, { items, icon }]) => (
-            <div
-              key={category}
-              className="card-enhanced"
-            >
+            <div key={category} className="card-enhanced">
               <div className="flex items-center mb-4">
                 <span className="text-2xl mr-3">{icon}</span>
                 <h3 className="text-lg font-semibold text-foreground">
