@@ -130,7 +130,7 @@ export default function AnimatedSkills() {
                       duration: 0.3,
                       delay: 0.1 * i + 0.05 * index,
                     }}
-                    className="px-4 py-2 text-sm font-medium bg-secondary/60 hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200 cursor-default text-readable"
+                    className="skill-tag px-4 py-2 text-sm font-medium rounded-lg cursor-default text-readable"
                   >
                     {skill}
                   </motion.span>

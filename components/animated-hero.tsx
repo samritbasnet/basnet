@@ -93,7 +93,8 @@ export default function AnimatedHero() {
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
       <div className="professional-container relative z-10">
         <div className="mb-8">
-          <span className="inline-flex items-center px-5 py-2.5 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 glass-effect">
+          <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-primary/5 text-primary rounded-full text-sm font-semibold border border-primary/20 glass-effect backdrop-blur-sm">
+            <span className="w-2 h-2 bg-primary rounded-full mr-3 animate-pulse"></span>
             👋 Hello, I'm
           </span>
         </div>
@@ -127,11 +128,11 @@ export default function AnimatedHero() {
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <Link
             href="#projects"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl group"
+            className="btn-primary inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl group"
           >
             View My Projects
             <svg
-              className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
+              className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -146,7 +147,7 @@ export default function AnimatedHero() {
           </Link>
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl font-medium hover:bg-primary/10 transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/30 text-primary rounded-xl font-semibold hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 backdrop-blur-sm"
           >
             Get In Touch
           </Link>
